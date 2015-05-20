@@ -1,0 +1,6 @@
+BASIC MISSION 1
+ANS: The question says it is an idiot test and don't ask anyone else.plus it is based on HTML.so the answer must be there in the source code of the page.find the text with the question;below that the password is given!
+BASIC MISSION 2
+ANS: The question is based on common sense! so when sam doesn't upload the password file the password is nothing! so password is empty or blank!
+BASIC MISSION 3
+ANS: http://www.hackthissite.org/missions/basic/3/password.php is the link where the password is stored! this ccn be understood by the form action tag in the html source code of the page! replace the word index by password in /missions/basic/3/index.php as the action attribute specifies where to send the form-data when a form is submitted. it sends it to the file sam uploaded :D
