@@ -23,4 +23,4 @@ main()
 		printf("\nStrings of unequal length\n");
 	return(0);
 }
-
+//answer - [
