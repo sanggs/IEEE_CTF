@@ -1,0 +1,21 @@
+********Commands to install Radare2 are********* 
+$ git clone https://github.com/radare/radare2.git
+$  cd radare2
+$ ./sys/install.sh
+********To make a file executable*********
+$ cat [filename] | base64 -d > [filename.out]
+$ file filename.out
+********To read a file*********
+In order to make sense of a binary file:
+1.save it 
+2.make it executable following the above steps
+3.Use r2 to convert into assembly 
+*********How to use radare2************
+$ r2 ./filename.out
+run aa [analyse all]
+run V [then you'll see the hexdump which can also be got by xxd filename.out]
+run p to see all asm commands and the functions clearly
+q for quit
+run v for list of functions and run g to go into a particular function.
+run ? for help 
+YOUR BINARY CODE IS UNDERSTOOD!!! :)
