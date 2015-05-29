@@ -1,0 +1,90 @@
+#include<stdio.h>
+#include<string.h>
+int cipher(char ptxt[100],char key[100],char ctxt[100],char vig[26][26]);
+int filter(char str[100]);
+int main()
+{
+	char ch,ptxt[100],key[100],ctxt[100],vig[26][26];
+	int i=0,j=0,a;
+	printf("\n*****CAPITALS ARE USED*****\n");
+	for(j=0;j<25;j++)
+	{
+		a='A'+j;
+		vig[0][j]=(char)(a);
+	}
+	for(j=0;j<25;j++)
+	{
+		a='A'+j;
+		vig[j][0]=(char)(a);
+	}
+	for(i=0;i<24;i++)
+	{
+		for(j=1;j<24;j++)
+			vig[i+1][j]=vig[i][j+1];
+	}
+	printf("Enter Plaintext\n");
+	gets(ptxt);
+	printf("Enter Key\n");
+	gets(key);
+	filter(ptxt);
+	filter(key);
+	cipher(ptxt,key,ctxt,vig);
+	printf("\nplaintext: %s \nkey: %s\n",ptxt,key);
+	printf("Ciphertext: %s\n",ctxt);
+	printf("Do you want to enter ciphertext?\nEnter Y for yes and N for no\n");
+		scanf("%c",&ch);
+	if(ch=='Y'||ch=='y')
+	{
+		ch=getchar();
+		printf("Enter ciphertext\n");
+		gets(ctxt);
+		printf("Enter key\n");
+		gets(key);
+		filter(ctxt);
+		filter(key);
+		cipher(ctxt,key,ptxt,vig);
+		printf("ciphertext: %s\nkey: %s\n",ctxt,key);
+		printf("plaintext: %s\n",ptxt);
+	}
+	else if(ch!='Y'||ch!='y'||ch!='N'||ch!='n')
+	{
+		printf("Invalid input\n");
+	}
+	else
+		printf("Decoding denied\nThank you!\n");
+	return 0;
+}
+int filter(char str[100])
+{
+	int i,l,k;
+	l=strlen(str);
+	for(i=0;str[i]!='\0';i++)
+	{
+		if(str[i]>='a'&&str[i]<='z')
+			str[i]-=32;
+	}
+	for(i=0;str[i]!='\0';i++)
+	{
+		if(str[i]==' ')
+		{
+			k=i;
+			for(k=i;k<l;k++)
+				str[k]=str[k+1];
+		}
+	}
+	return 0;
+}
+int cipher(char ptxt[100],char key[100],char ctxt[100],char vig[26][26])
+{
+	int i=0,j=0,k=0,l;
+	l=strlen(key);
+	while(ptxt[k]!='\0')
+	{
+		i=key[k%l]-'A';
+		j=ptxt[k]-'A';
+		ctxt[k]=vig[i][j];
+		k++;
+	}
+	ctxt[k]='\0';
+	return 0;
+}
