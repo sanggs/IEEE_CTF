@@ -3,5 +3,12 @@ ANS: The question says it is an idiot test and don't ask anyone else.plus it is 
 BASIC MISSION 2
 ANS: The question is based on common sense! so when sam doesn't upload the password file the password is nothing! so password is empty or blank!
 BASIC MISSION 3
-ANS: http://www.hackthissite.org/missions/basic/3/password.php is the link where the password is stored! this ccn be understood by the form action tag in the html source code of the page! replace the word index by password in /missions/basic/3/index.php as the action attribute specifies where to send the form-data when a form is submitted. it sends it to the file sam uploaded :D
-
+ANS: http://www.hackthissite.org/missions/basic/3/password.php is the link where the password is stored! this can be understood by the form action tag in the html source code of the page! replace the word index by password in /missions/basic/3/index.php as the action attribute specifies where to send the form-data when a form is submitted. it sends it to the file sam uploaded :D
+BASIC MISSION 4
+ANS: In the source code of the page we can replace sam's id with ours by pasting it in a notepad file. Then the password gets mailed to us :)
+BASIC MISSION 5
+ANS:
+BASIC MISSION 6
+ANS: The logic can be found by trying examples like 0000 for which the ecrypted text is 0123. So this makes it clear that we need to subtract 012345678 from each character of the encrypted text and hence we get the password!
+BASIC MISSION 7
+ANS:
