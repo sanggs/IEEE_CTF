@@ -7,8 +7,8 @@ ANS: http://www.hackthissite.org/missions/basic/3/password.php is the link where
 BASIC MISSION 4
 ANS: In the source code of the page we can replace sam's id with ours by pasting it in a notepad file. Then the password gets mailed to us :)
 BASIC MISSION 5
-ANS:
+ANS: Inspect element using Firebug and replacing sam's email Id the password gets mailed to us! 
 BASIC MISSION 6
 ANS: The logic can be found by trying examples like 0000 for which the ecrypted text is 0123. So this makes it clear that we need to subtract 012345678 from each character of the encrypted text and hence we get the password!
 BASIC MISSION 7
-ANS:
+ANS: ;ls when entered into the year box lists the directories. We can copy the php file enter it into the URL to get the password!
