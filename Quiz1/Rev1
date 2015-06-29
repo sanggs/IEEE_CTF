@@ -1,0 +1,6 @@
+Find to sys.main().
+It takes 3 command line args
+By looking at the code we realise that it takes the 3 numbers as co-efficients of a quadratic and hence gives output
+'You_have_found__an__answer._Find_the_logic_as_well' if delta==0
+roots are given as output if delta>0.
+'Try harder' if delta<0.
